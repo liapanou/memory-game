@@ -40,7 +40,7 @@ export function CardGame() {
             >
               <picture>
                 <img
-                  className="h-full w-full select-none  object-fill "
+                  className="h-full w-full select-none cursor-pointer object-fill "
                   draggable={false}
                   src={
                     idx === settings.flipCard1.idx ||
