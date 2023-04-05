@@ -65,7 +65,7 @@ export default function Game() {
   useEffect(() => {
     if (
       !settings.muted &&
-      settings.flipCard1.name !== settings.flipCard2.name &&
+      settings.flipCard1.src !== settings.flipCard2.src &&
       settings.flipCard2.idx !== -1
     )
       audioformistake().play();
