@@ -331,6 +331,7 @@ export function SettingsProvider(props: { children: ReactNode }) {
         ...state,
         flips: state.flips + 1,
         match: [...state.match, flipCard2.srcf],
+        ...clearCards,
       });
     } else setState({ ...state, flipCard2, flips: state.flips + 1 });
   }
