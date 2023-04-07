@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 
+const router = useRouter;
+
 const animalCards: { srcb: string; srcf: string }[] = [
   {
     srcb: "/images/game/pattern-card.jpg",
@@ -358,7 +360,9 @@ export function SettingsProvider(props: { children: ReactNode }) {
       }}
     >
       {/* when is muted true the music isn't playing , but when muted is false the music is playing */}
-      {!state.muted && <audio ref={ref} autoPlay src="/audio/music.mp3" />}
+      {!state.muted && 
+        router.asPath !== "/win" &&
+        router.asPath !== "/gameover" && <audio ref={ref} autoPlay src="/audio/music.mp3" />}
 
       {props.children}
     </Context.Provider>
