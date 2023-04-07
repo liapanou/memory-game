@@ -2,6 +2,7 @@ import { useT } from "@/Hooks/useT";
 import { useSettings } from "@/providers";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Win() {
   const settings = useSettings();
