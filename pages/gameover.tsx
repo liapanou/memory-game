@@ -9,6 +9,19 @@ export default function GameOver() {
   const { flips, match, time } = settings;
   const { locale } = useRouter();
   const t = useT();
+  
+  const audioforlost = () =>
+    new Audio("/audio/no-luck-too-bad-disappointing-sound-effect-112943.mp3");
+
+  // sets the audio for losing the game
+  useEffect(
+    () => {
+      audioforlost().play();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
+  
   return (
     <div
       className={clsx(
