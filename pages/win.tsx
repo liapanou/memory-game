@@ -7,7 +7,17 @@ export default function Win() {
   const settings = useSettings();
   const { flips, match, time } = settings;
   const t = useT();
+  const audioforsuccess = () => new Audio("/audio/success.mp3");
 
+  // sets the audio for wining the game
+  useEffect(
+    () => {
+      audioforsuccess().play();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
+  
   return (
     <div className=" h-screen w-screen overflow-hidden ">
       <Head>
