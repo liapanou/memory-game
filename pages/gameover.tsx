@@ -2,6 +2,7 @@ import { useT } from "@/Hooks/useT";
 import { useSettings } from "@/providers";
 import clsx from "clsx";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function GameOver() {
   const settings = useSettings();
